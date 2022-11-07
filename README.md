@@ -57,7 +57,8 @@ $RAPIDSIM_ROOT/build/src/RapidSim.exe $RAPIDSIM_ROOT/validation/$DECAY 500e6 1
 #This step is only necessary if your output exceeds 2.5G due to limited space in your home directory.
 
 eos cp $DECAY$TREE /eos/lhcb/user/m/tkowalski/simulation
-eos cp $DECAY$HIST /eos/lhcb/user/m/tkowalski/simulation 
+eos cp $DECAY$HIST /eos/lhcb/user/m/tkowalski/simulation
+
 ----------------------------------------------------------------------
 
 5. In order to run your RapidSim simulation go to the directory where you placed test.sh and test.sub and do:
