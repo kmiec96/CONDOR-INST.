@@ -71,9 +71,9 @@ At startup there should appear *.log file in this directory. At completion you s
 
 6. If you want to move *.err, *.out, *.log to /eos do: <br>
 
-eos cp /afs/cern.ch/user/m/mkmiec/*.err /eos/lhcb/user/t/tkowalski/simulation <br>
-eos cp /afs/cern.ch/user/m/mkmiec/*.out /eos/lhcb/user/t/tkowalski/simulation <br>
-eos cp /afs/cern.ch/user/m/mkmiec/*.log /eos/lhcb/user/t/tkowalski/simulation <br>
+eos cp /afs/cern.ch/user/m/mkmiec/ *.err /eos/lhcb/user/t/tkowalski/simulation <br>
+eos cp /afs/cern.ch/user/m/mkmiec/ *.out /eos/lhcb/user/t/tkowalski/simulation <br>
+eos cp /afs/cern.ch/user/m/mkmiec/ *.log /eos/lhcb/user/t/tkowalski/simulation <br>
 
 -----------------------------------------------------------------------
 
