@@ -29,35 +29,36 @@ queue
 4. test.sh should include:
 
 ---------------------------------------------------------------------------------
+
 #!/bin/bash
 
-echo "test.sh started   "
+echo "test.sh started   "<br>
 
-source /cvmfs/lhcb.cern.ch/lib/lcg/releases/LCG_87/gcc/4.9.3/x86_64-slc6/setup.sh
-source /cvmfs/lhcb.cern.ch/lib/lcg/releases/LCG_87/ROOT/6.08.02/x86_64-slc6-gcc49-opt/bin/thisroot.sh
-source /cvmfs/sft.cern.ch/lcg/views/setupViews.sh LCG_101 x86_64-centos7-gcc11-opt
+source /cvmfs/lhcb.cern.ch/lib/lcg/releases/LCG_87/gcc/4.9.3/x86_64-slc6/setup.sh <br>
+source /cvmfs/lhcb.cern.ch/lib/lcg/releases/LCG_87/ROOT/6.08.02/x86_64-slc6-gcc49-opt/bin/thisroot.sh <br>
+source /cvmfs/sft.cern.ch/lcg/views/setupViews.sh LCG_101 x86_64-centos7-gcc11-opt <br>
 
-export EVTGEN_ROOT=/afs/cern.ch/user/t/tkowalski/evtgen
-export RAPIDSIM_ROOT=/afs/cern.ch/user/t/tkowalski/RapidSim
-export DECAY=Dst2D0pip_D02KmEpVu
-export TREE=_tree.root
-export HIST=_hists.root
+export EVTGEN_ROOT=/afs/cern.ch/user/t/tkowalski/evtgen <br>
+export RAPIDSIM_ROOT=/afs/cern.ch/user/t/tkowalski/RapidSim <br>
+export DECAY=Dst2D0pip_D02KmEpVu <br>
+export TREE=_tree.root <br>
+export HIST=_hists.root <br>
 
-echo $EVTGEN_ROOT
-echo $RAPIDSIM_ROOT
+echo $EVTGEN_ROOT <br>
+echo $RAPIDSIM_ROOT <br>
 
-ls -h $TMPDIR
-cd $TMPDIR
-echo $TMPDIR
-df -h $TMPDIR
+ls -h $TMPDIR <br>
+cd $TMPDIR <br>
+echo $TMPDIR <br>
+df -h $TMPDIR <br>
 
-$RAPIDSIM_ROOT/build/src/RapidSim.exe $RAPIDSIM_ROOT/validation/$DECAY 500e6 1
+$RAPIDSIM_ROOT/build/src/RapidSim.exe $RAPIDSIM_ROOT/validation/$DECAY 500e6 1 <br>
 
-#Copy output *.root files from temporary storage to eos
-#This step is only necessary if your output exceeds 2.5G due to limited space in your home directory.
+#Copy output *.root files from temporary storage to eos <br>
+#This step is only necessary if your output exceeds 2.5G due to limited space in your home directory. <br>
 
-eos cp $DECAY$TREE /eos/lhcb/user/m/tkowalski/simulation
-eos cp $DECAY$HIST /eos/lhcb/user/m/tkowalski/simulation
+eos cp $DECAY$TREE /eos/lhcb/user/m/tkowalski/simulation <br>
+eos cp $DECAY$HIST /eos/lhcb/user/m/tkowalski/simulation <br>
 
 ----------------------------------------------------------------------
 
